@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background: linear-gradient(#af67e9 0%, #6565e7 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+#faq-body {
+  width: 90vw;
+  height: 70vh;
+  background-color: white;
+  border-radius: 20px;
+}
+
+#faq-body h1 {
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+#faq-body img {
+  -webkit-transform: translateY(-55%);
+          transform: translateY(-55%);
+  display: block;
+  margin-left: 22px;
+}
+
+#cards {
+  padding: 20px;
+}
+
+#cards button {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 400;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  background-color: white;
+  margin-bottom: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#cards button.active {
+  font-weight: 700;
+}
+
+#cards button::after {
+  content: url(../images/icon-arrow-down.svg);
+  float: right;
+}
+
+.answer p {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 10px;
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=style.css.map */
