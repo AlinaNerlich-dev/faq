@@ -23,19 +23,37 @@ body {
   height: 70vh;
   background-color: white;
   border-radius: 20px;
+  @media (min-width: 1440px) {
+    width: 70vw;
+    display: flex;
+  }
   h1 {
     padding-bottom: 50px;
     text-align: center;
+    @media (min-width: 1440px) {
+      text-align: left;
+      margin-top: 130px;
+    }
   }
-  img{
-      transform: translateY(-55%);
-      display: block;
-      margin-left: 22px; //   normally: margin o auto; but pic is not correctly cutted.
-    
+  img {
+    transform: translateY(-55%);
+    position: absolute;
+    display: block;
+    margin-left: 22px; //   normally: margin o auto; but pic is not correctly cutted.
+    @media (min-width: 1440px) {
+      width: 50%;
+      height: 80%;
+      transform: translate(-30%, 10%);
+    }
   }
 }
 #cards {
   padding: 20px;
+  padding-top: 0;
+  @media (min-width: 1440px) {
+    width: 50%;
+    padding-left: 0;
+  }
   button {
     width: 100%;
     text-align: left;
@@ -47,7 +65,9 @@ body {
     background-color: white;
     margin-bottom: 10px;
     transition: 0.5s;
-
+    @media (min-width: 1440px) {
+      width: 90%;
+    }
     &.active {
       font-weight: $bold-font-weight;
     }
@@ -58,13 +78,11 @@ body {
   }
 }
 
-.answer {
-  p {
-    font-size: 12px;
-    font-weight: $base-font-weight;
-    padding: 10px;
-    display: none;
-  }
+div.answer {
+  font-size: 12px;
+  font-weight: $base-font-weight;
+  padding: 10px;
+  // display: none;
 }
 
 .attribution {

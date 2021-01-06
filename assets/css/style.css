@@ -30,20 +30,54 @@ body {
   border-radius: 20px;
 }
 
+@media (min-width: 1440px) {
+  #faq-body {
+    width: 70vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 #faq-body h1 {
   padding-bottom: 50px;
   text-align: center;
 }
 
+@media (min-width: 1440px) {
+  #faq-body h1 {
+    text-align: left;
+    margin-top: 130px;
+  }
+}
+
 #faq-body img {
   -webkit-transform: translateY(-55%);
           transform: translateY(-55%);
+  position: absolute;
   display: block;
   margin-left: 22px;
 }
 
+@media (min-width: 1440px) {
+  #faq-body img {
+    width: 50%;
+    height: 80%;
+    -webkit-transform: translate(-30%, 10%);
+            transform: translate(-30%, 10%);
+  }
+}
+
 #cards {
   padding: 20px;
+  padding-top: 0;
+}
+
+@media (min-width: 1440px) {
+  #cards {
+    width: 50%;
+    padding-left: 0;
+  }
 }
 
 #cards button {
@@ -58,6 +92,12 @@ body {
   margin-bottom: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media (min-width: 1440px) {
+  #cards button {
+    width: 90%;
+  }
 }
 
 #cards button.active {

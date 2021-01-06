@@ -1,24 +1,32 @@
 let button = document.querySelectorAll("button");
-let answer = document.querySelectorAll(".answer");
+
 
 button.forEach((item) => {
     item.addEventListener("click", e =>{
-    item.classList.add("active");
-        
-    })
+        const answer = e.target.nextElementSibling;
+         
+        if (answer.style.display == "block"){
+            answer.style.display = "none";
+            item.classList.remove("active");  
+        } else{
+            answer.style.display = "block";
+            item.classList.add("active");  
+        } 
+        })
 });
 
 
-
-
-
-
-
-// let outputArea = document.querySelector("#output");
-
-// document.querySelectorAll("button:not(#submit)").forEach((item) => {
-
-//        item.addEventListener("click", (e) => {
-//         outputArea.innerText += e.target.innerText;
-//     });
-// });
+/* <script>
+      document.querySelectorAll(".accordion").forEach((item) => {
+        item.addEventListener("click", (e) => {
+          const panel = e.target.nextElementSibling;
+          if (panel.style.display == "block") {
+            panel.style.display = "none";
+            e.target.classList.remove("accordion-active");
+          } else {
+            panel.style.display = "block";
+            e.target.classList.add("accordion-active");
+          }
+        });
+      });
+    </script> */
