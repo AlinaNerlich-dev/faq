@@ -82,7 +82,15 @@ body {
 
 #cards button {
   width: 100%;
-  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px;
   font-size: 13px;
   font-weight: 400;
@@ -92,6 +100,17 @@ body {
   margin-bottom: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+#cards button img {
+  position: static;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+#cards button img.turn {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 @media (min-width: 1440px) {
@@ -104,12 +123,7 @@ body {
   font-weight: 700;
 }
 
-#cards button::after {
-  content: url(../images/icon-arrow-down.svg);
-  float: right;
-}
-
-.answer p {
+div.answer {
   font-size: 12px;
   font-weight: 400;
   padding: 10px;

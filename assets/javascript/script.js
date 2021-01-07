@@ -4,29 +4,18 @@ let button = document.querySelectorAll("button");
 button.forEach((item) => {
     item.addEventListener("click", e =>{
         const answer = e.target.nextElementSibling;
-         
-        if (answer.style.display == "block"){
-            answer.style.display = "none";
-            item.classList.remove("active");  
-        } else{
+        const arrow = document.querySelector("button > img");
+
+        if (answer.style.display === "none"){
             answer.style.display = "block";
-            item.classList.add("active");  
+            item.classList.add("active");
+            arrow.classList.add("turn");
+        } else{
+            answer.style.display = "none";
+            item.classList.remove("active");
+            arrow.classList.remove("turn");  
         } 
         })
 });
 
 
-/* <script>
-      document.querySelectorAll(".accordion").forEach((item) => {
-        item.addEventListener("click", (e) => {
-          const panel = e.target.nextElementSibling;
-          if (panel.style.display == "block") {
-            panel.style.display = "none";
-            e.target.classList.remove("accordion-active");
-          } else {
-            panel.style.display = "block";
-            e.target.classList.add("accordion-active");
-          }
-        });
-      });
-    </script> */

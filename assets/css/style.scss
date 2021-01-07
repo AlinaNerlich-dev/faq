@@ -56,7 +56,9 @@ body {
   }
   button {
     width: 100%;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     font-size: 13px;
     font-weight: $base-font-weight;
@@ -65,8 +67,12 @@ body {
     background-color: white;
     margin-bottom: 10px;
     transition: 0.5s;
-    img {
-      float: right;
+    img{
+      position: static;
+      transition: .7s;
+      &.turn{
+        transform: rotate(180deg);
+      }
     }
     @media (min-width: 1440px) {
       width: 90%;
@@ -74,14 +80,14 @@ body {
     &.active {
       font-weight: $bold-font-weight;
     }
-    }
   }
+}
 
 div.answer {
   font-size: 12px;
   font-weight: $base-font-weight;
   padding: 10px;
-  // display: none;
+  display: none;
 }
 
 .attribution {
