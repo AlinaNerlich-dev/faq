@@ -65,18 +65,17 @@ body {
     background-color: white;
     margin-bottom: 10px;
     transition: 0.5s;
+    img {
+      float: right;
+    }
     @media (min-width: 1440px) {
       width: 90%;
     }
     &.active {
       font-weight: $bold-font-weight;
     }
-    &::after {
-      content: url(../images/icon-arrow-down.svg);
-      float: right;
     }
   }
-}
 
 div.answer {
   font-size: 12px;
