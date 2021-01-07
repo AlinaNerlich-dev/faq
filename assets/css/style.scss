@@ -67,10 +67,10 @@ body {
     background-color: white;
     margin-bottom: 10px;
     transition: 0.5s;
-    img{
+    img {
       position: static;
-      transition: .7s;
-      &.turn{
+      transition: 0.7s;
+      &.turn {
         transform: rotate(180deg);
       }
     }
